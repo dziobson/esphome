@@ -1,0 +1,51 @@
+  - platform: time_based
+    name: "${friendly_name} Roleta 1"
+    open_action:
+      - switch.turn_on: relay2
+    open_duration: 20s
+    close_action:
+      - switch.turn_on: relay1
+    close_duration: 20s
+    #max_duration: 25sec
+    stop_action:
+      - switch.turn_off: relay2
+      - switch.turn_off: relay1
+
+  - platform: time_based
+    name: "${friendly_name} Roleta 2"
+    open_action:
+      - switch.turn_on: relay4
+    open_duration: 20s
+    close_action:
+      - switch.turn_on: relay3
+    close_duration: 20s
+    #max_duration: 25sec
+    stop_action:
+      - switch.turn_off: relay4
+      - switch.turn_off: relay3
+
+  - platform: time_based
+    name: "${friendly_name} Roleta 3"
+    open_action:
+      - switch.turn_on: relay6
+    open_duration: 20s
+    close_action:
+      - switch.turn_on: relay5
+    close_duration: 20s
+    #max_duration: 25sec
+    stop_action:
+      - switch.turn_off: relay6
+      - switch.turn_off: relay5
+
+  - platform: time_based
+    name: "${friendly_name} Roleta 4"
+    open_action:
+      - switch.turn_on: relay8
+    open_duration: 20s
+    close_action:
+      - switch.turn_on: relay7
+    close_duration: 20s
+    #max_duration: 25sec
+    stop_action:
+      - switch.turn_off: relay8
+      - switch.turn_off: relay7
