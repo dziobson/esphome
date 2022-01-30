@@ -1,0 +1,51 @@
+  - platform: gpio
+    pin: 16
+    id: relay1
+    interlock_wait_time: 350ms
+    interlock: &interlock_1 [relay1, relay2]
+    restore_mode: always off
+  - platform: gpio
+    pin: 14
+    id: relay2
+    interlock_wait_time: 350ms
+    interlock: *interlock_1
+    restore_mode: always off
+
+  - platform: gpio
+    pin: 12
+    id: relay3
+    interlock_wait_time: 350ms
+    interlock: &interlock_2 [relay3, relay4]
+    restore_mode: always off
+  - platform: gpio
+    pin: 13
+    id: relay4
+    interlock_wait_time: 350ms
+    interlock: *interlock_2
+    restore_mode: always off
+
+  - platform: gpio
+    pin: 15
+    id: relay5
+    interlock_wait_time: 350ms
+    interlock: &interlock_3 [relay5, relay6]
+    restore_mode: always off
+  - platform: gpio
+    pin: 0
+    id: relay6
+    interlock_wait_time: 350ms
+    interlock: *interlock_3
+    restore_mode: always off
+
+  - platform: gpio
+    pin: 4
+    id: relay7
+    interlock_wait_time: 350ms
+    interlock: &interlock_4 [relay7, relay8]
+    restore_mode: always off
+  - platform: gpio
+    pin: 5
+    id: relay8
+    interlock_wait_time: 350ms
+    interlock: *interlock_4
+    restore_mode: always off
